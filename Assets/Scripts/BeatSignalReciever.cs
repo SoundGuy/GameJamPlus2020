@@ -23,13 +23,20 @@ public class BeatSignalReciever : MonoBehaviour
         
     }
 
-    public void IncreaseSize(float IncreasePrec)
+    public void Beat()
     {
-        if (IncreasePrec == 0f)
+        IncreaseSize();
+        // TODO: Make this a subscription. 
+        foreach (Attacker attacker in FindObjectsOfType<Attacker>())
         {
-            IncreasePrec = defIncreasePrec;
+            attacker.Beat();            
         }
+    }
 
+    public void IncreaseSize()
+    {
+        
+        float IncreasePrec = defIncreasePrec;
         float PrecOfBeat = defPrecOfBeat;
         
         

@@ -7,6 +7,8 @@ using UnityEngine.Timeline;
 
 public class BeatManager : MonoBehaviour
 {
+
+    public static BeatManager _instance;
     [SerializeField] private int BMP;
     
     [SerializeField] private UnityEvent BeatAction;
@@ -15,12 +17,16 @@ public class BeatManager : MonoBehaviour
     [SerializeField] public static float BeatLength;
     [SerializeField] private float FirstBeat;
     [SerializeField] private float LastBeat;
-    [SerializeField] private int playedBeat;
+    [SerializeField] public int playedBeat;
     [SerializeField]  bool beatEnabled = false;
         
     // Start is called before the first frame update
     void Start()
     {
+        if (_instance == null)
+        {
+            _instance = this;
+        }
         BeatLength = 60f / BMP;
      }
 
