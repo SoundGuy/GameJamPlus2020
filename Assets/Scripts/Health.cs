@@ -5,18 +5,36 @@ using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
-    private float _hp = 10;
+    [SerializeField] HealthBar healthBar;
+    [SerializeField] float _hp = 100;
+
     public float hp
     {
         get { return _hp; }
     }
-    public float maxHealth = 100;
+    [SerializeField] float _maxHealth = 100;
+    public float maxHealth
+    {
+        get { return _maxHealth; }
+        set
+        {
+            if (_maxHealth == value) return;
+
+            _maxHealth = value;
+            UpdateHP();
+        }
+    }
 
     public UnityEvent OnDeath;
+    private void Start()
+    {
+        UpdateHP();
+    }
 
     public void Hit(float amount)
     {
-        _hp -= amount;
+        _hp = Mathf.Max(_hp - amount, 0);
+        UpdateHP();
         if (_hp <= 0)
             OnDeath.Invoke();
     }
@@ -24,5 +42,11 @@ public class Health : MonoBehaviour
     public void Heal(float amount)
     {
         _hp = Mathf.Min(_hp + amount, maxHealth);
+        UpdateHP();
+    }
+
+    void UpdateHP()
+    {
+        healthBar.UpdateHealth(_hp, maxHealth);
     }
 }
