@@ -52,7 +52,6 @@ public class Attacker : Health
     
     public void Beat()
     {
-        print($"{gameObject.name} - target: {target}, hp: {hp}");
         if (!target || hp <= 0)
             return;
         
@@ -67,17 +66,16 @@ public class Attacker : Health
             defenseSprite.sprite = DefDamege.sprite;          
         }
 
-        
         // TODO : Animate Attack Preperation.
-        
-        
+
+
         // Attack Target
         // TODO check if current attack is less then number of attacks return  
-        
-                       
-        
+
+
+
         // TODO check if attacker is dead and return; 
-               
+
         int NumDamagesATK = _attacks[currentAttack].Damages.Length;
         int currentBeatATK = BeatManager._instance.playedBeat % NumDamagesATK;
         BeatAttack.BeatDamageProperties AtkDamage = _attacks[currentAttack].Damages[currentBeatATK];
@@ -103,7 +101,7 @@ public class Attacker : Health
                     case BeatAttack.BeatDamageProperties.DamageType.FullDamage:
                     {
                         // TODO - Make better forumla that also relies on Defense. for example substruct or devide defense.
-                        float damageTaken = AtkDamage.Strentgh; 
+                        float damageTaken = Mathf.Max(AtkDamage.Strentgh - DefDamegeTarget.Strentgh, 0); 
                         target.Hit(damageTaken);
                         
                         
@@ -111,6 +109,12 @@ public class Attacker : Health
                         
                         break;
                     }
+                    case BeatAttack.BeatDamageProperties.DamageType.NoDamage:
+                    {
+                        float damageTaken = AtkDamage.Strentgh;
+                        target.Hit(damageTaken);
+                        break;
+                            }
                 }
                 break;
             }
