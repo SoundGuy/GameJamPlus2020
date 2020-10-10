@@ -15,9 +15,13 @@ MonoBehaviour:
   Damages:
   - _damageType: 0
     Strentgh: 0
+    sprite: {fileID: -5003655230158945603, guid: 33fa5801ed2b5fe4288513865c1e1b70, type: 3}
   - _damageType: 1
     Strentgh: 5
+    sprite: {fileID: -2710273797107635564, guid: 33fa5801ed2b5fe4288513865c1e1b70, type: 3}
   - _damageType: 0
     Strentgh: 0
+    sprite: {fileID: -5003655230158945603, guid: 33fa5801ed2b5fe4288513865c1e1b70, type: 3}
   - _damageType: 1
     Strentgh: 5
+    sprite: {fileID: -2710273797107635564, guid: 33fa5801ed2b5fe4288513865c1e1b70, type: 3}

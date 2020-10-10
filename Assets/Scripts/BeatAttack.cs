@@ -18,6 +18,7 @@ public class BeatAttack : ScriptableObject
 
         [SerializeField] public DamageType _damageType;
         [SerializeField] public float Strentgh;
+        [SerializeField] public Sprite sprite;
     }
 
     [SerializeField] public BeatDamageProperties  [] Damages;        
