@@ -52,8 +52,8 @@ public class Attacker : Health
     
     public void Beat()
     {
-
-        if (!target)
+        print($"{gameObject.name} - target: {target}, hp: {hp}");
+        if (!target || hp <= 0)
             return;
         
         // TODO : Animate Defense
@@ -116,9 +116,8 @@ public class Attacker : Health
 
         }
 
-        
-
     }
+
     // Start is called before the first frame update
     protected override void Start()
     {

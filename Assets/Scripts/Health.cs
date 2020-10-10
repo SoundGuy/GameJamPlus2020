@@ -28,16 +28,19 @@ public class Health : MonoBehaviour
     public UnityEvent OnDeath;
     protected virtual void Start()
     {
-        print("health Start");
         UpdateHP();
     }
 
     public void Hit(float amount)
     {
+        if (_hp <= 0) return;
+
         _hp = Mathf.Max(_hp - amount, 0);
         UpdateHP();
         if (_hp <= 0)
+        {
             OnDeath.Invoke();
+        }
     }
 
     public void Heal(float amount)
