@@ -26,8 +26,9 @@ public class Health : MonoBehaviour
     }
 
     public UnityEvent OnDeath;
-    private void Start()
+    protected virtual void Start()
     {
+        print("health Start");
         UpdateHP();
     }
 
