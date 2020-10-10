@@ -20,6 +20,7 @@ public class BeatAttack : ScriptableObject
 
         [SerializeField] public DamageType _damageType;
         [SerializeField] public float Strentgh;
+        [SerializeField] public float Range;
         [SerializeField] public Sprite sprite;
         [SerializeField] public MovementDirection moveDirection;
         [SerializeField] public AudioClip sound;
