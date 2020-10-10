@@ -14,12 +14,15 @@ public class BeatAttack : ScriptableObject
             NoDamage,
             FullDamage,
             Loop,
+            Move,
         }
 
 
         [SerializeField] public DamageType _damageType;
         [SerializeField] public float Strentgh;
         [SerializeField] public Sprite sprite;
+        [SerializeField] public MovementDirection moveDirection;
+        [SerializeField] public AudioClip sound;
     }
 
     [SerializeField] public BeatDamageProperties  [] Damages;        
