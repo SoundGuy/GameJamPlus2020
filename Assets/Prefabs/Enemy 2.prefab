@@ -63,5 +63,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7718527613830531925, guid: 727beed250944dc419b9424c902f66ab, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1953965193
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718527613830531925, guid: 727beed250944dc419b9424c902f66ab, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 727beed250944dc419b9424c902f66ab, type: 3}
