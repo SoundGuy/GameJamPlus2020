@@ -3020,7 +3020,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f6159b33072437a4480b06c3be07d06f, type: 2}
   _Defenses:
   - {fileID: 11400000, guid: b878297b560a7ee4b828b14c8efe304c, type: 2}
-  target: {fileID: 1680568778}
+  target: {fileID: 0}
   currentAttack: 1
   currentDefense: 0
   defenseSprite: {fileID: 0}
