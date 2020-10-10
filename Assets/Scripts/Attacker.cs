@@ -52,20 +52,24 @@ public class Attacker : Health
     
     public void Beat()
     {
-        if (!target || hp <= 0)
+        if (hp <= 0)
             return;
-        
-        // TODO : Animate Defense
         
         int NumDamagesDEF = _Defenses[currentDefense].Damages.Length;
         int currentBeatDEF = BeatManager._instance.playedBeat % NumDamagesDEF;
         BeatAttack.BeatDamageProperties DefDamege = _Defenses[currentDefense].Damages[currentBeatDEF];
-        
         if (defenseSprite != null)
-        {           
-            defenseSprite.sprite = DefDamege.sprite;          
+        {
+            defenseSprite.sprite = DefDamege.sprite;
         }
+        base.healthBar.UpdateDefenseStatus(DefDamege.sprite);
 
+        // TODO : Animate Defense
+
+
+        if (!target)
+            return;
+        
         // TODO : Animate Attack Preperation.
 
 
@@ -84,9 +88,8 @@ public class Attacker : Health
         {           
             attackSprite.sprite= AtkDamage.sprite;          
         }
-        
-        base.healthBar.UpdateBeat(AtkDamage.sprite, DefDamege.sprite);
-        
+        base.healthBar.UpdateAttackStatus(AtkDamage.sprite);
+
         int NumDamagesDEFTaret = target._Defenses[target.currentDefense].Damages.Length;
         int currentBeatDEFTarget = BeatManager._instance.playedBeat % NumDamagesDEFTaret;
         BeatAttack.BeatDamageProperties DefDamegeTarget = target._Defenses[target.currentDefense].Damages[currentBeatDEFTarget];

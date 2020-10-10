@@ -22,9 +22,13 @@ public class HealthBar : MonoBehaviour
         text.text = $"{hp} / {maxHp}";
     }
 
-    public void UpdateBeat(Sprite attackSprite, Sprite defenseSprite)
+    public void UpdateDefenseStatus(Sprite sprite)
     {
-        attackImage.sprite = attackSprite ? attackSprite : defaultSprite;
-        defenseImage.sprite = defenseSprite ? defenseSprite : defaultSprite;
+        defenseImage.sprite = sprite ? sprite : defaultSprite;
+    }
+
+    public void UpdateAttackStatus(Sprite sprite)
+    {
+        attackImage.sprite = sprite ? sprite : defaultSprite;
     }
 }
