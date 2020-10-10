@@ -39,7 +39,8 @@ public class BeatManager : MonoBehaviour
         FirstBeat = Time.time;
         playedBeat = 0;
         BeatLength = 60f / BMP;        
-        GetComponent<PlayableDirector>().Play();
+        //GetComponent<PlayableDirector>().Play();
+        GetComponent<AudioSource>().Play();
         if (startButton)
         {
             startButton.gameObject.SetActive(false);

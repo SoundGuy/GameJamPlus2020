@@ -166,6 +166,7 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
+  SpriteImage: {fileID: 1922801334}
   _attacks:
   - {fileID: 11400000, guid: f64cb825d705b1947a37a4faa72b37f1, type: 2}
   - {fileID: 11400000, guid: 73faacfd2fe47f342b6362eae6403cd6, type: 2}

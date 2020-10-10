@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Attacker : Health
 {
+    [SerializeField] private GameObject SpriteImage;
 
     [SerializeField] public  BeatAttack[] _attacks;
     [SerializeField] public  BeatAttack[] _Defenses;
@@ -67,6 +68,33 @@ public class Attacker : Health
         if (hp <= 0)
             return;
         
+        
+        
+        // animate Dance
+
+        // TODO Change this when getting animation
+        if (SpriteImage)
+        {
+            BeatSignalReciever beatSignalReciever = FindObjectOfType<BeatSignalReciever>();
+
+            float IncreasePrec = 0.8f;
+            float PrecOfBeat = beatSignalReciever.defPrecOfBeat;
+
+            Vector3 origScale = gameObject.transform.localScale;
+
+
+            Vector3 toScale = origScale;
+            ;
+            toScale.y *= IncreasePrec;
+            float UpLength = BeatManager.BeatLength * PrecOfBeat * (1f - beatSignalReciever.safetyBuffer);
+            float DownLength = BeatManager.BeatLength * (1f - PrecOfBeat) * (1f - beatSignalReciever.safetyBuffer);
+            LeanTween.scale(SpriteImage, toScale, UpLength).setOnComplete(() =>
+            {
+                LeanTween.scale(SpriteImage, origScale, DownLength);
+            });
+        }
+
+
         int NumDamagesDEF = _Defenses[currentDefense].Damages.Length;
         int currentBeatDEF = BeatManager._instance.playedBeat % NumDamagesDEF;
         BeatAttack.BeatDamageProperties DefDamege = _Defenses[currentDefense].Damages[currentBeatDEF];

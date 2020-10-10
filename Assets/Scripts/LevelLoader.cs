@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
@@ -21,10 +22,15 @@ public class LevelLoader : MonoBehaviour
        SceneControllerManager.instance.FadeAndLoadScene(sceneName);
     }
 
+
+    public void RestartScene()
+    {
+        SceneControllerManager.instance.FadeAndLoadScene(SceneManager.GetActiveScene().name);
+    }
     
     // TODO Make Singlton
     private void Start()
     {
-        DontDestroyOnLoad(this);
+        //DontDestroyOnLoad(this);
     }
 }

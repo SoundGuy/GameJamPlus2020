@@ -6,10 +6,10 @@ using UnityEngine;
 public class BeatSignalReciever : MonoBehaviour
 {
 
-    [SerializeField] float defIncreasePrec = 2f;
-    [SerializeField] float defPrecOfBeat = 0.2f;
+    [SerializeField] public  float defIncreasePrec = 2f;
+    [SerializeField] public  float defPrecOfBeat = 0.2f;
     
-    [SerializeField] float safetyBuffer = 0.2f;
+    [SerializeField] public float safetyBuffer = 0.2f;
 
     // Start is called before the first frame update
     void Start()
