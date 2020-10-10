@@ -30,6 +30,8 @@ public class Attacker : Health
         if (!target)
             return;
         // TODO check if attack is less then number of attacks
+        
+        // TODO check if attacker is dead and return; 
 
         int NumDamagesATK = _attacks[currentAttack].Damages.Length;
         int currentBeatATK = BeatManager._instance.playedBeat % NumDamagesATK;

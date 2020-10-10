@@ -1582,7 +1582,7 @@ GameObject:
   - component: {fileID: 1680568774}
   - component: {fileID: 1680568778}
   m_Layer: 0
-  m_Name: Defender
+  m_Name: Enemy1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1684,10 +1684,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _attacks:
-  - {fileID: 11400000, guid: 7462580891ad8f44481b0b3c1c83821e, type: 2}
+  - {fileID: 11400000, guid: b878297b560a7ee4b828b14c8efe304c, type: 2}
   _Defenses:
   - {fileID: 11400000, guid: b878297b560a7ee4b828b14c8efe304c, type: 2}
-  target: {fileID: 0}
+  target: {fileID: 2021571193}
   currentAttack: 0
   currentDefense: 0
 --- !u!1 &1735184171
@@ -1836,7 +1836,7 @@ GameObject:
   - component: {fileID: 1791221415}
   - component: {fileID: 1791221414}
   m_Layer: 0
-  m_Name: Defender (1)
+  m_Name: Enemy2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1861,12 +1861,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _attacks:
-  - {fileID: 11400000, guid: 7462580891ad8f44481b0b3c1c83821e, type: 2}
+  - {fileID: 11400000, guid: 74792026942cabf42b29907d8f6ecd41, type: 2}
   _Defenses:
   - {fileID: 11400000, guid: b878297b560a7ee4b828b14c8efe304c, type: 2}
   - {fileID: 11400000, guid: d299bcf5d312f39449b7c3e8cf0f7629, type: 2}
   - {fileID: 11400000, guid: 015b1a13bb39679418a7c761bef5b3a8, type: 2}
-  target: {fileID: 0}
+  target: {fileID: 2021571193}
   currentAttack: 0
   currentDefense: 2
 --- !u!65 &1791221415
@@ -2045,7 +2045,7 @@ GameObject:
   - component: {fileID: 2021571189}
   - component: {fileID: 2021571193}
   m_Layer: 0
-  m_Name: Attacker
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2141,8 +2141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 12088943}
-  _hp: 100
-  _maxHealth: 100
+  _hp: 1000
+  _maxHealth: 1000
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
@@ -2151,7 +2151,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 74792026942cabf42b29907d8f6ecd41, type: 2}
   - {fileID: 11400000, guid: d299bcf5d312f39449b7c3e8cf0f7629, type: 2}
   - {fileID: 11400000, guid: 015b1a13bb39679418a7c761bef5b3a8, type: 2}
-  _Defenses: []
+  _Defenses:
+  - {fileID: 11400000, guid: b878297b560a7ee4b828b14c8efe304c, type: 2}
   target: {fileID: 1680568778}
   currentAttack: 1
   currentDefense: 0
