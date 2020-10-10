@@ -167,15 +167,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _attacks:
-  - {fileID: 11400000, guid: c6d55e8485ff0de4abf76a5f4f0bde57, type: 2}
+  - {fileID: 11400000, guid: f64cb825d705b1947a37a4faa72b37f1, type: 2}
   - {fileID: 11400000, guid: 73faacfd2fe47f342b6362eae6403cd6, type: 2}
   - {fileID: 11400000, guid: a0a40c5d5d4cdb14e92594a08d8a6aab, type: 2}
   - {fileID: 11400000, guid: 61bc54176b51ac945a094dcb6e35854e, type: 2}
   - {fileID: 11400000, guid: 45418e83d66d3374484879a66784fdf6, type: 2}
+  - {fileID: 11400000, guid: c6d55e8485ff0de4abf76a5f4f0bde57, type: 2}
   _Defenses:
   - {fileID: 11400000, guid: 77dcb4c3d50c84344b1c598e33c527a1, type: 2}
   target: {fileID: 0}
-  currentAttack: 1
+  AttackStartBeat: 0
+  AttackCurrentBeat: 0
+  BeatRemaining: 0
+  currentAttack: 0
   currentDefense: 0
   defenseSprite: {fileID: 0}
   attackSprite: {fileID: 0}

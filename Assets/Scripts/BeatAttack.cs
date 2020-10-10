@@ -13,6 +13,7 @@ public class BeatAttack : ScriptableObject
         {
             NoDamage,
             FullDamage,
+            Loop,
         }
 
 

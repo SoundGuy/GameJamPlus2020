@@ -10,6 +10,10 @@ public class Attacker : Health
     [SerializeField] public  BeatAttack[] _Defenses;
     
     [SerializeField] private Attacker target;
+
+    [SerializeField] private int AttackStartBeat;
+    [SerializeField] private int AttackCurrentBeat;
+    [SerializeField] private int BeatRemaining;
     public Attacker ChooseCurrentTarget
     {
         get { return target; }
@@ -28,11 +32,19 @@ public class Attacker : Health
         set
         {
             if (currentAttack == value) return;
-
+                       
             currentAttack = value;
+
+            HandleNewAttack();
         }
     }
-    
+
+    private void HandleNewAttack()
+    {
+        AttackCurrentBeat = 0;
+        AttackStartBeat = BeatManager._instance.playedBeat +1;
+    }
+
     [SerializeField] public int currentDefense =0;
     public int ChooseCurrentDefense
     {
@@ -67,6 +79,9 @@ public class Attacker : Health
         // TODO : Animate Defense
 
 
+        
+        // TODO : move this after sprites?
+        
         if (!target)
             return;
         
@@ -77,24 +92,40 @@ public class Attacker : Health
         // TODO check if current attack is less then number of attacks return  
 
 
-
         // TODO check if attacker is dead and return; 
-
         int NumDamagesATK = _attacks[currentAttack].Damages.Length;
-        int currentBeatATK = BeatManager._instance.playedBeat % NumDamagesATK;
-        BeatAttack.BeatDamageProperties AtkDamage = _attacks[currentAttack].Damages[currentBeatATK];
+        //int currentBeatATK = BeatManager._instance.playedBeat % NumDamagesATK;
+        //BeatAttack.BeatDamageProperties AtkDamage = _attacks[currentAttack].Damages[currentBeatATK];
+        BeatAttack.BeatDamageProperties AtkDamage = _attacks[currentAttack].Damages[AttackCurrentBeat];
 
+        
         if (attackSprite != null)
         {           
             attackSprite.sprite= AtkDamage.sprite;          
         }
         base.healthBar.UpdateAttackStatus(AtkDamage.sprite);
 
+        BeatRemaining = NumDamagesATK - AttackCurrentBeat;
+        if (BeatRemaining > 0 && currentAttack != 0) 
+        {
+            healthBar.BeatCounter.text = BeatRemaining.ToString();
+        }
+        else
+        {
+            healthBar.BeatCounter.text = "";
+        }
+        
+        
+        
         int NumDamagesDEFTaret = target._Defenses[target.currentDefense].Damages.Length;
         int currentBeatDEFTarget = BeatManager._instance.playedBeat % NumDamagesDEFTaret;
         BeatAttack.BeatDamageProperties DefDamegeTarget = target._Defenses[target.currentDefense].Damages[currentBeatDEFTarget];
+
+
         
+        AttackCurrentBeat++;
         
+        // Perform Attack
         switch (AtkDamage._damageType)        
         {
             case BeatAttack.BeatDamageProperties.DamageType.FullDamage:
@@ -121,7 +152,21 @@ public class Attacker : Health
                 }
                 break;
             }
+            case BeatAttack.BeatDamageProperties.DamageType.Loop:
+            {
+                AttackCurrentBeat = 0;
+                break;
+            }
 
+        }
+
+
+
+
+        if (AttackCurrentBeat >= NumDamagesATK)
+        {            
+            AttackCurrentBeat = 0;
+            ChoosecurrentAttack = 0;
         }
 
     }

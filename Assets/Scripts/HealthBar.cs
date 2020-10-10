@@ -11,6 +11,8 @@ public class HealthBar : MonoBehaviour
     [SerializeField] Sprite defaultSprite;
     [SerializeField] Image attackImage;
     [SerializeField] Image defenseImage;
+    
+    [SerializeField] public TextMeshProUGUI BeatCounter;
 
     Animator animator;
 
