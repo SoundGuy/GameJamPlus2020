@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] HealthBar healthBar;
+    [SerializeField] protected HealthBar healthBar;
     [SerializeField] float _hp = 100;
 
     public float hp

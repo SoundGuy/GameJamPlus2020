@@ -64,8 +64,9 @@ public class Attacker : Health
         
         if (defenseSprite != null)
         {           
-            defenseSprite.sprite= DefDamege.sprite;          
+            defenseSprite.sprite = DefDamege.sprite;          
         }
+
         
         // TODO : Animate Attack Preperation.
         
@@ -80,13 +81,13 @@ public class Attacker : Health
         int NumDamagesATK = _attacks[currentAttack].Damages.Length;
         int currentBeatATK = BeatManager._instance.playedBeat % NumDamagesATK;
         BeatAttack.BeatDamageProperties AtkDamage = _attacks[currentAttack].Damages[currentBeatATK];
-        
-        
+
         if (attackSprite != null)
         {           
             attackSprite.sprite= AtkDamage.sprite;          
         }
         
+        base.healthBar.UpdateBeat(AtkDamage.sprite, DefDamege.sprite);
         
         int NumDamagesDEFTaret = target._Defenses[target.currentDefense].Damages.Length;
         int currentBeatDEFTarget = BeatManager._instance.playedBeat % NumDamagesDEFTaret;
