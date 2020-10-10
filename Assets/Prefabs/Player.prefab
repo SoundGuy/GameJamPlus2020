@@ -173,6 +173,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 61bc54176b51ac945a094dcb6e35854e, type: 2}
   - {fileID: 11400000, guid: 45418e83d66d3374484879a66784fdf6, type: 2}
   - {fileID: 11400000, guid: c6d55e8485ff0de4abf76a5f4f0bde57, type: 2}
+  - {fileID: 11400000, guid: 7d9d7eb82e2a8ac48abd70e330aa00a6, type: 2}
   _Defenses:
   - {fileID: 11400000, guid: 77dcb4c3d50c84344b1c598e33c527a1, type: 2}
   target: {fileID: 0}

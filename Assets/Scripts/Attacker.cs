@@ -82,8 +82,8 @@ public class Attacker : Health
         
         // TODO : move this after sprites?
         
-        if (!target)
-            return;
+        //if (!target)
+        //    return;
         
         // TODO : Animate Attack Preperation.
 
@@ -117,12 +117,6 @@ public class Attacker : Health
         
         
         
-        int NumDamagesDEFTaret = target._Defenses[target.currentDefense].Damages.Length;
-        int currentBeatDEFTarget = BeatManager._instance.playedBeat % NumDamagesDEFTaret;
-        BeatAttack.BeatDamageProperties DefDamegeTarget = target._Defenses[target.currentDefense].Damages[currentBeatDEFTarget];
-
-
-        
         AttackCurrentBeat++;
         
         // Perform Attack
@@ -130,6 +124,18 @@ public class Attacker : Health
         {
             case BeatAttack.BeatDamageProperties.DamageType.FullDamage:
             {
+
+                if (!target)
+                {
+                    break;                    
+                }
+                        
+                int NumDamagesDEFTaret = target._Defenses[target.currentDefense].Damages.Length;
+                int currentBeatDEFTarget = BeatManager._instance.playedBeat % NumDamagesDEFTaret;
+                BeatAttack.BeatDamageProperties DefDamegeTarget = target._Defenses[target.currentDefense].Damages[currentBeatDEFTarget];
+
+
+                
                 switch (DefDamegeTarget._damageType)
                 {
                     case BeatAttack.BeatDamageProperties.DamageType.FullDamage:
@@ -148,10 +154,19 @@ public class Attacker : Health
                         float damageTaken = AtkDamage.Strentgh;
                         target.Hit(damageTaken);
                         break;
-                            }
+                    }                    
                 }
                 break;
             }
+            case BeatAttack.BeatDamageProperties.DamageType.Move:
+            {
+                MovementByGrid moveGrid = GetComponent<MovementByGrid>();
+                if (moveGrid)
+                {
+                    moveGrid.MoveCharacter(AtkDamage.moveDirection);
+                }
+                break;
+            } 
             case BeatAttack.BeatDamageProperties.DamageType.Loop:
             {
                 AttackCurrentBeat = 0;
