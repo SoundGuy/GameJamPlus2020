@@ -129,6 +129,20 @@ public class Attacker : Health
     // Start is called before the first frame update
     protected override void Start()
     {
+        if (target == null)
+        {
+            if (tag == "Enemy")
+            {
+                foreach (Attacker attacker in FindObjectsOfType<Attacker>())                    
+                {
+                    if (attacker.tag == "Player")
+                    {
+                        target = attacker;
+                        break;
+                    } 
+                }
+            }
+        }
         base.Start();
     }
 

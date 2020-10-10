@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UIElements;
 
 public class Health : MonoBehaviour
 {
     [SerializeField] protected HealthBar healthBar;
     [SerializeField] float _hp = 100;
+
+
+    [SerializeField] private LevelManager _levelManager;
 
     public float hp
     {
@@ -29,17 +33,22 @@ public class Health : MonoBehaviour
     protected virtual void Start()
     {
         UpdateHP();
+        _levelManager = FindObjectOfType<LevelManager>();
     }
-
+    
     public void Hit(float amount)
     {
         if (_hp <= 0) return;
 
         _hp = Mathf.Max(_hp - amount, 0);
         UpdateHP();
-        if (_hp <= 0)
-        {
+        if (_hp <= 0) // DEAD
+        {            
             OnDeath.Invoke();
+            if (_levelManager)
+            {
+                _levelManager.AnnouceDeath(this);
+            }
         }
     }
 

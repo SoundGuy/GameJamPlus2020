@@ -9,7 +9,7 @@ public class BeatAttack : ScriptableObject
     [System.Serializable]
     public class BeatDamageProperties
     {
-         public enum DamageType
+        public enum DamageType
         {
             NoDamage,
             FullDamage,
