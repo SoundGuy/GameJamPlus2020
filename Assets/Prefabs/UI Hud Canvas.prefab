@@ -3358,7 +3358,7 @@ GameObject:
   - component: {fileID: 2986482980335037769}
   - component: {fileID: 861301891496443898}
   m_Layer: 5
-  m_Name: XP (1)
+  m_Name: Gold
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

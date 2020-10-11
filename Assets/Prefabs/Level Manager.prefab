@@ -48,6 +48,7 @@ MonoBehaviour:
   AliveEnemies: 0
   AutoProgress: 0
   nextButton: {fileID: 0}
+  restartButton: {fileID: 0}
 --- !u!114 &5402030023411001800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,8 +67,8 @@ MonoBehaviour:
   - Level3
   - Level4
   - Level5
+  - Level5.5
   - Level6
-  - Level7
   - Level8
   - Level9
   - Level10
