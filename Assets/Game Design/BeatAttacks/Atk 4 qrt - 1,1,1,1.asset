@@ -15,13 +15,30 @@ MonoBehaviour:
   Damages:
   - _damageType: 1
     Strentgh: 1
+    Range: 0
     sprite: {fileID: 21300000, guid: 11a0bf88c4e423e4284643b85083dfce, type: 3}
+    moveDirection: 0
+    sound:
+    - {fileID: 8300000, guid: 6d3bd78de79a6b7439203b42262da895, type: 3}
+    - {fileID: 8300000, guid: f125c355df2890a4ea04e84a9ae87168, type: 3}
+    - {fileID: 8300000, guid: 286fbf5df986d45498e963b074df90c3, type: 3}
+    - {fileID: 8300000, guid: a77c0758b00e37f4e83f9ec9ec550134, type: 3}
+    - {fileID: 8300000, guid: eb2f4070271e471479ede23d45568dbe, type: 3}
   - _damageType: 1
     Strentgh: 1
+    Range: 0
     sprite: {fileID: 21300000, guid: 11a0bf88c4e423e4284643b85083dfce, type: 3}
+    moveDirection: 0
+    sound: []
   - _damageType: 1
     Strentgh: 1
+    Range: 0
     sprite: {fileID: 21300000, guid: 11a0bf88c4e423e4284643b85083dfce, type: 3}
+    moveDirection: 0
+    sound: []
   - _damageType: 1
     Strentgh: 1
+    Range: 0
     sprite: {fileID: 21300000, guid: 11a0bf88c4e423e4284643b85083dfce, type: 3}
+    moveDirection: 0
+    sound: []
