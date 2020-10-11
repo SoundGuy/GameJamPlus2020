@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 724264124464448236}
   - component: {fileID: 3914872569802198407}
-  - component: {fileID: 6757613928371434342}
+  - component: {fileID: 5164014038352815692}
   m_Layer: 0
   m_Name: Thunder Sheet
   m_TagString: Untagged
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4708010100551347911}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.62562114, y: 0.62562114, z: 0.62562114}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -69,9 +69,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1953965193
+  m_SortingLayer: 2
+  m_SortingOrder: 2
   m_Sprite: {fileID: -9070382862115394501, guid: f9aae7eb55bfae84594869b55fae9db6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6757613928371434342
+--- !u!95 &5164014038352815692
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -93,7 +93,7 @@ Animator:
   m_GameObject: {fileID: 4708010100551347911}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e8bde29248adab542bb2e5156d9c6680, type: 2}
+  m_Controller: {fileID: 9100000, guid: 58d9a6e4f34fce343b35238ea7874150, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class Attacker : Health
@@ -59,8 +61,8 @@ public class Attacker : Health
     }
 
 
-    [SerializeField] private Image defenseSprite;
-    [SerializeField] private Image attackSprite;
+    [SerializeField] private SpriteRenderer defenseSprite;
+    [SerializeField] private SpriteRenderer attackSprite;
     
     
     public void Beat()
@@ -98,14 +100,40 @@ public class Attacker : Health
         int NumDamagesDEF = _Defenses[currentDefense].Damages.Length;
         int currentBeatDEF = BeatManager._instance.playedBeat % NumDamagesDEF;
         BeatAttack.BeatDamageProperties DefDamege = _Defenses[currentDefense].Damages[currentBeatDEF];
-        if (defenseSprite != null)
+        
+        switch (DefDamege._damageType)
         {
-            defenseSprite.sprite = DefDamege.sprite;
+            case BeatAttack.BeatDamageProperties.DamageType.NoDamage:
+            {
+                if (defenseSprite != null )
+                {
+                    //defenseSprite.sprite = DefDamege.sprite;
+                    float timeOn = BeatManager.BeatLength * 0.5f;
+                    defenseSprite.gameObject.SetActive(true);
+                    LeanTween.value(defenseSprite.gameObject, 0,0, timeOn).setOnComplete(() =>
+                    {
+                        defenseSprite.gameObject.SetActive(false);    
+                    });
+                }
+                break;
+            }
+            case BeatAttack.BeatDamageProperties.DamageType.Move:
+            {
+                //Debug.Log("Moving - " + DefDamege.moveDirection);
+                MovementByGrid moveGrid = GetComponent<MovementByGrid>();
+                if (moveGrid)
+                {
+                    moveGrid.MoveCharacter(DefDamege.moveDirection);
+                }
+                
+                break;
+            }
+            
         }
+        
         base.healthBar.UpdateDefenseStatus(DefDamege.sprite);
 
-        // TODO : Animate Defense
-
+        
 
         
         // TODO : move this after sprites?
@@ -127,10 +155,12 @@ public class Attacker : Health
         BeatAttack.BeatDamageProperties AtkDamage = _attacks[currentAttack].Damages[AttackCurrentBeat];
 
         
+        /*
         if (attackSprite != null)
-        {           
-            attackSprite.sprite= AtkDamage.sprite;          
-        }
+        {
+            
+            // attackSprite.sprite= AtkDamage.sprite;          
+        }*/        
         base.healthBar.UpdateAttackStatus(AtkDamage.sprite);
 
         BeatRemaining = NumDamagesATK - AttackCurrentBeat;
@@ -164,6 +194,23 @@ public class Attacker : Health
 
 
                 
+                // TODO: move to paremetes
+                float timeOn = BeatManager.BeatLength * 0.5f;
+                //float timeOff = BeatManager.BeatLength - timeOn; 
+                        
+                        
+                // TODO: Animate Attack
+                if (attackSprite)
+                {
+                    attackSprite.gameObject.SetActive(true);
+                    LeanTween.value(attackSprite.gameObject, 0,0, timeOn).setOnComplete(() =>
+                    {
+                        attackSprite.gameObject.SetActive(false);    
+                    });
+                            
+                }
+                
+                
                 switch (DefDamegeTarget._damageType)
                 {
                     case BeatAttack.BeatDamageProperties.DamageType.FullDamage:
@@ -173,14 +220,12 @@ public class Attacker : Health
                         target.Hit(damageTaken);
                         
                         
-                        // TODO: Animate Attack
-                        
+                        // TODO: Animate Succefull Attack                                                                        
                         break;
                     }
                     case BeatAttack.BeatDamageProperties.DamageType.NoDamage:
                     {
-                        float damageTaken = AtkDamage.Strentgh;
-                        target.Hit(damageTaken);
+                        // TODO: Animate Failed Attack
                         break;
                     }                    
                 }
