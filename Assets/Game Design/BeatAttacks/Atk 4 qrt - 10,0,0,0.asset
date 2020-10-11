@@ -19,7 +19,10 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 5166d2e74b615fb498cfdc918f6c4fcb, type: 3}
     moveDirection: 0
     sound:
-    - {fileID: 8300000, guid: 66cd69bd3ef563c478d785704aaecc49, type: 3}
+    - {fileID: 8300000, guid: 1219ac4b3d1c7344f95d6ff65a3d1870, type: 3}
+    - {fileID: 8300000, guid: 888105da1f41a8444a63dc4aa08a2155, type: 3}
+    - {fileID: 8300000, guid: 5695cb264c655f745b00a1bdfd81739c, type: 3}
+    - {fileID: 8300000, guid: 157ec64552edb6646b383ee10073c953, type: 3}
   - _damageType: 0
     Strentgh: 0
     Range: 0
