@@ -193,6 +193,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   SpriteImage: {fileID: 7718527613830531927}
+  IncreasePrec: 1
+  UpSprite: {fileID: -8815983175589627427, guid: 01394096b290bd74597b56a98acf3464, type: 3}
+  DownSprite: {fileID: -3658393955828229444, guid: 01394096b290bd74597b56a98acf3464, type: 3}
   _attacks:
   - {fileID: 11400000, guid: f64cb825d705b1947a37a4faa72b37f1, type: 2}
   - {fileID: 11400000, guid: 61bc54176b51ac945a094dcb6e35854e, type: 2}

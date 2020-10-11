@@ -8,6 +8,9 @@ using UnityEngine.UI;
 public class Attacker : Health
 {
     [SerializeField] private GameObject SpriteImage;
+    [SerializeField] float IncreasePrec = 0.8f;
+    [SerializeField] private Sprite UpSprite;
+    [SerializeField] private Sprite DownSprite;
 
     [SerializeField] public  BeatAttack[] _attacks;
     [SerializeField] public  BeatAttack[] _Defenses;
@@ -84,7 +87,9 @@ public class Attacker : Health
 
             BeatSignalReciever beatSignalReciever = FindObjectOfType<BeatSignalReciever>();
 
-            float IncreasePrec = 0.8f;
+            
+            
+            
             float PrecOfBeat = beatSignalReciever.defPrecOfBeat;
 
             Vector3 origScale = gameObject.transform.localScale;
@@ -95,10 +100,25 @@ public class Attacker : Health
             toScale.y *= IncreasePrec;
             float UpLength = BeatManager.BeatLength * PrecOfBeat * (1f - beatSignalReciever.safetyBuffer);
             float DownLength = BeatManager.BeatLength * (1f - PrecOfBeat) * (1f - beatSignalReciever.safetyBuffer);
-            /*LeanTween.scale(SpriteImage, toScale, UpLength).setOnComplete(() =>
+            
+            
+            
+
+            GetComponent<Animator>().Play("Bent");
+            
+            if (DownSprite)
+            {
+                SpriteImage.GetComponent<SpriteRenderer>().sprite = DownSprite;
+            }
+
+            LeanTween.scale(SpriteImage, toScale, UpLength).setOnComplete(() =>
             {
                 LeanTween.scale(SpriteImage, origScale, DownLength);
-            });*/
+                if (UpSprite)
+                {
+                    SpriteImage.GetComponent<SpriteRenderer>().sprite = UpSprite;
+                }
+            });
 
         }
 
