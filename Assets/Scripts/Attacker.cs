@@ -17,6 +17,9 @@ public class Attacker : Health
     [SerializeField] private int AttackStartBeat;
     [SerializeField] private int AttackCurrentBeat;
     [SerializeField] private int BeatRemaining;
+
+    private Animator animator;
+
     public Attacker ChooseCurrentTarget
     {
         get { return target; }
@@ -77,6 +80,8 @@ public class Attacker : Health
         // TODO Change this when getting animation
         if (SpriteImage)
         {
+
+
             BeatSignalReciever beatSignalReciever = FindObjectOfType<BeatSignalReciever>();
 
             float IncreasePrec = 0.8f;
@@ -90,10 +95,11 @@ public class Attacker : Health
             toScale.y *= IncreasePrec;
             float UpLength = BeatManager.BeatLength * PrecOfBeat * (1f - beatSignalReciever.safetyBuffer);
             float DownLength = BeatManager.BeatLength * (1f - PrecOfBeat) * (1f - beatSignalReciever.safetyBuffer);
-            LeanTween.scale(SpriteImage, toScale, UpLength).setOnComplete(() =>
+            /*LeanTween.scale(SpriteImage, toScale, UpLength).setOnComplete(() =>
             {
                 LeanTween.scale(SpriteImage, origScale, DownLength);
-            });
+            });*/
+
         }
 
 
@@ -204,11 +210,13 @@ public class Attacker : Health
                 
                 // TODO: move to paremetes
                 float timeOn = BeatManager.BeatLength * 0.5f;
-                //float timeOff = BeatManager.BeatLength - timeOn; 
-                        
-                        
-                // TODO: Animate Attack
-                if (attackSprite)
+                    //float timeOff = BeatManager.BeatLength - timeOn; 
+
+
+                    // TODO: Animate Attack
+                    animator.SetTrigger("isAttacking");
+
+                    if (attackSprite)
                 {
                     attackSprite.gameObject.SetActive(true);
                     LeanTween.value(attackSprite.gameObject, 0,0, timeOn).setOnComplete(() =>
@@ -217,10 +225,10 @@ public class Attacker : Health
                     });
                             
                 }
-                
-                
-                
-                switch (DefDamegeTarget._damageType)
+
+
+
+                    switch (DefDamegeTarget._damageType)
                 {
                     case BeatAttack.BeatDamageProperties.DamageType.FullDamage:
                     {
@@ -288,12 +296,13 @@ public class Attacker : Health
 
     public void Die()
     {
-
-        LeanTween.rotateLocal(SpriteImage, Vector3.forward * -90f, BeatManager.BeatLength );
+        animator.SetBool("isDeath", true);
+        //LeanTween.rotateLocal(SpriteImage, Vector3.forward * -90f, BeatManager.BeatLength );
     }
     // Start is called before the first frame update
     protected override void Start()
     {
+        animator = GetComponent<Animator>();
         if (target == null)
         {
             if (tag == "Enemy")
