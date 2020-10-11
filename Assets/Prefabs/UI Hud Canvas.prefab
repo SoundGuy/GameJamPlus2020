@@ -2662,6 +2662,7 @@ GameObject:
   - component: {fileID: 1675384627717594938}
   - component: {fileID: 5422774179591272678}
   - component: {fileID: 661749595375974352}
+  - component: {fileID: 2900918573772121698}
   m_Layer: 5
   m_Name: Button Message
   m_TagString: Untagged
@@ -2717,7 +2718,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 065755ac374312644bbcd8516ab39dda, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2782,6 +2783,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2900918573772121698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4715282197468426220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bd77c588d1b23f4cb68c66c36d752a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defIncreasePrec: 1.1
+  defPrecOfBeat: 0.2
+  safetyBuffer: 0.2
 --- !u!1 &4973301974436027889
 GameObject:
   m_ObjectHideFlags: 0
@@ -3031,14 +3047,14 @@ MonoBehaviour:
     (Click to dismiss)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
