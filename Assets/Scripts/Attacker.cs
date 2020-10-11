@@ -235,8 +235,10 @@ public class Attacker : Health
                     }
                     case BeatAttack.BeatDamageProperties.DamageType.NoDamage:
                     {
-                        // TODO: Animate Failed Attack
+                        // TODO: Animate Failed Attack                                               
                         // TODO: Animate Failed Sound
+                        
+                        target.BlockedAttack();
                         break;
                     }                    
                 }

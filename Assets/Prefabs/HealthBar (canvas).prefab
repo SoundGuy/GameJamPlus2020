@@ -545,6 +545,7 @@ MonoBehaviour:
   attackImage: {fileID: 2890910839767947253}
   defenseImage: {fileID: 416955658398500259}
   DamageReceived: {fileID: 5483781762472507732}
+  DamageReceivedOffeset: 10
   DamageBlocked: {fileID: 7143684497863068390}
   BeatCounter: {fileID: 1968766391921678907}
 --- !u!1 &3401364705571381193

@@ -12,12 +12,16 @@ public class HealthBar : MonoBehaviour
     [SerializeField] Image attackImage;
     [SerializeField] Image defenseImage;
     
-    [SerializeField] TextMeshProUGUI DamageReceived;
-    [SerializeField] TextMeshProUGUI DamageBlocked;
+    
+    [SerializeField] public TextMeshProUGUI DamageReceived;
+    [SerializeField] public float DamageReceivedOffeset = 10f;
+    [SerializeField] public TextMeshProUGUI DamageBlocked;
+    [SerializeField] public float DamageBlockeddOffeset = 10f; 
     
     [SerializeField] public TextMeshProUGUI BeatCounter;
 
     Animator animator;
+    
 
     public void UpdateHealth(float hp, float maxHp)
     {

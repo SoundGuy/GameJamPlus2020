@@ -278,7 +278,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1671249069148998845}
-  m_RootOrder: 13
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -670,6 +670,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   startDelay: 2
+  LevelLoadTime: 0
   FirstBeat: 0
   LastBeat: 0
   playedBeat: 0
@@ -1049,6 +1050,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2021571193}
+    - target: {fileID: 1671249068478660490, guid: 03a6d6d16c4dd1d42a144c79737219f1, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1671249068478660490, guid: 03a6d6d16c4dd1d42a144c79737219f1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1671249068478660490, guid: 03a6d6d16c4dd1d42a144c79737219f1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1671249068478660490, guid: 03a6d6d16c4dd1d42a144c79737219f1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1671249068478660491, guid: 03a6d6d16c4dd1d42a144c79737219f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1071,11 +1088,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1671249068915679798, guid: 03a6d6d16c4dd1d42a144c79737219f1, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -191
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1671249068915679798, guid: 03a6d6d16c4dd1d42a144c79737219f1, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -132.6
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1671249068915679798, guid: 03a6d6d16c4dd1d42a144c79737219f1, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1671249068915679798, guid: 03a6d6d16c4dd1d42a144c79737219f1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1671249068915679799, guid: 03a6d6d16c4dd1d42a144c79737219f1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

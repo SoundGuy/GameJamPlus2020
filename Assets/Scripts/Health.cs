@@ -50,8 +50,55 @@ public class Health : MonoBehaviour
                 _levelManager.AnnouceDeath(this);
             }
         }
+        
+        DisplayDamageTaken(amount);
+        
+    }       
+
+    void DisplayDamageTaken(float amount)
+    {
+
+        float effectLength = BeatManager.BeatLength * 0.8f; // put this parameter exposed  
+        // Hit Points Text
+        healthBar.DamageReceived.gameObject.SetActive(true);
+        healthBar.DamageReceived.text = "-" + amount.ToString();
+        Vector3 OrigPos = healthBar.DamageReceived.transform.localPosition;
+        LeanTween.moveLocalY(healthBar.DamageReceived.gameObject, OrigPos.y+ healthBar.DamageReceivedOffeset,
+            effectLength);
+        LeanTween.value(healthBar.DamageReceived.gameObject, 1f, 0, effectLength).setOnUpdate((float value) =>
+        {
+            healthBar.DamageReceived.alpha = value;
+        }).setOnComplete(() =>
+        {
+            healthBar.DamageReceived.gameObject.SetActive(false);
+            
+            healthBar.DamageReceived.transform.localPosition = OrigPos;
+            healthBar.DamageReceived.alpha = 1;
+        });
     }
 
+
+    public void BlockedAttack()
+    {
+        float effectLength = BeatManager.BeatLength * 0.8f; // put this parameter exposed  
+        // Hit Points Text
+        healthBar.DamageBlocked.gameObject.SetActive(true);
+        //healthBar.DamageReceived.text = "-" + amount.ToString();
+        Vector3 OrigPos = healthBar.DamageBlocked.transform.localPosition;
+        LeanTween.moveLocalY(healthBar.DamageBlocked.gameObject, OrigPos.y+ healthBar.DamageBlockeddOffeset,
+            effectLength);
+        LeanTween.value(healthBar.DamageBlocked.gameObject, 1f, 0f, effectLength).setOnUpdate((float value) =>
+        {
+            healthBar.DamageBlocked.alpha = value;
+        }) .setOnComplete(() =>                
+        {
+            healthBar.DamageBlocked.gameObject.SetActive(false);
+            
+            healthBar.DamageBlocked.transform.localPosition = OrigPos;
+            healthBar.DamageBlocked.alpha = 1;
+        });
+    }
+    
     public void Heal(float amount)
     {
         _hp = Mathf.Min(_hp + amount, maxHealth);
