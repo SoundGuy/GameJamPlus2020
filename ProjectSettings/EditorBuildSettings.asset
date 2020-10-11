@@ -5,21 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/Test Scenes/BarTest.unity
-    guid: 901a9eaf2a8825247a7a476fa6a2c220
-  - enabled: 1
-    path: Assets/Scenes/Test Scenes/OdedTest.unity
-    guid: 8184d142b952e544da34141abf9af7eb
-  - enabled: 1
-    path: Assets/Scenes/Test Scenes/Health Example.unity
-    guid: 85a2828ec5dff21498b30ea626c6290f
-  - enabled: 1
-    path: Assets/Scenes/Test Scenes/Atk - Def on HealthBar Example.unity
-    guid: b9cf0db7bd8c3a04e858f29fa23859cd
   - enabled: 1
     path: Assets/Scenes/Levels/Level1.unity
     guid: fdbe66a01a4617240ad0c68940bf77a9
@@ -51,6 +36,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Level9.unity
     guid: 1b758631baf69cb4e8e87ccbfc9784ad
   - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: bfb4d7f183d69594ca9769c74c498996
+  - enabled: 1
     path: Assets/Scenes/Levels/Level10.unity
     guid: a9458f8de8d7db04582b3258030239c8
+  - enabled: 1
+    path: Assets/Scenes/Test Scenes/BarTest.unity
+    guid: 901a9eaf2a8825247a7a476fa6a2c220
+  - enabled: 1
+    path: Assets/Scenes/Test Scenes/OdedTest.unity
+    guid: 8184d142b952e544da34141abf9af7eb
+  - enabled: 1
+    path: Assets/Scenes/Test Scenes/Health Example.unity
+    guid: 85a2828ec5dff21498b30ea626c6290f
+  - enabled: 1
+    path: Assets/Scenes/Test Scenes/Atk - Def on HealthBar Example.unity
+    guid: b9cf0db7bd8c3a04e858f29fa23859cd
   m_configObjects: {}

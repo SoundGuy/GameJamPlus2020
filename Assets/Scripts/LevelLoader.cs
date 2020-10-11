@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -30,6 +31,18 @@ public class LevelLoader : MonoBehaviour
         // TODO : reuse scene controller
         //SceneControllerManager.instance.FadeAndLoadScene(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void Quit()
+    {
+        
+#if UNITY_EDITOR
+        if(EditorApplication.isPlaying) 
+        {
+            UnityEditor.EditorApplication.isPlaying = false;
+        }
+#endif
+        Application.Quit();
     }
     
     // TODO Make Singlton

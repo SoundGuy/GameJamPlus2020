@@ -71,5 +71,5 @@ MonoBehaviour:
   - Level6
   - Level8
   - Level9
-  - Level10
+  - GameOver
   currentLevel: 0
