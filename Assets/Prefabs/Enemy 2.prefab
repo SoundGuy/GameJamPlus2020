@@ -83,5 +83,9 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7718527613830531925, guid: 727beed250944dc419b9424c902f66ab, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 925d3d9cc09f81845bd741792ea1ca93, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 727beed250944dc419b9424c902f66ab, type: 3}

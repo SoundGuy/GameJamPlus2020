@@ -12,10 +12,17 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private bool AutoProgress = false;
 
     [SerializeField] private Button nextButton;
+    [SerializeField] private Button restartButton;
     
     
     public void AnnouceDeath(Health imDead = null)
     {
+        if (imDead.tag == "Player")
+        {
+            restartButton.gameObject.SetActive(true);
+            return;
+        }
+        
         AliveEnemies--;
         if (AliveEnemies == 0)
         {

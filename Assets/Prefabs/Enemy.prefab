@@ -99,7 +99,19 @@ MonoBehaviour:
   _maxHealth: 100
   OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7718527612272394404}
+        m_TargetAssemblyTypeName: Attacker, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   SpriteImage: {fileID: 7718527613830531927}
   _attacks:
   - {fileID: 11400000, guid: f64cb825d705b1947a37a4faa72b37f1, type: 2}
@@ -107,6 +119,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a0a40c5d5d4cdb14e92594a08d8a6aab, type: 2}
   - {fileID: 11400000, guid: 73faacfd2fe47f342b6362eae6403cd6, type: 2}
   - {fileID: 11400000, guid: c6d55e8485ff0de4abf76a5f4f0bde57, type: 2}
+  - {fileID: 11400000, guid: f2d2a0c294b424541b1f275b5d3fcfa0, type: 2}
+  - {fileID: 11400000, guid: 0a3cf70db959ddf499dd078e5493c9da, type: 2}
   _Defenses:
   - {fileID: 11400000, guid: 77dcb4c3d50c84344b1c598e33c527a1, type: 2}
   - {fileID: 11400000, guid: fb127df860e578847bb7b563faff7f94, type: 2}
@@ -234,11 +248,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2946887674948023209, guid: 8104a411c0bcc6e42ab6112eb7710bbe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.22
       objectReference: {fileID: 0}
     - target: {fileID: 2946887674948023209, guid: 8104a411c0bcc6e42ab6112eb7710bbe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 2946887674948023209, guid: 8104a411c0bcc6e42ab6112eb7710bbe, type: 3}
       propertyPath: m_LocalPosition.z
@@ -275,6 +289,18 @@ PrefabInstance:
     - target: {fileID: 2946887674948023209, guid: 8104a411c0bcc6e42ab6112eb7710bbe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946887674948023209, guid: 8104a411c0bcc6e42ab6112eb7710bbe, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5463238
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946887674948023209, guid: 8104a411c0bcc6e42ab6112eb7710bbe, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.81494784
+      objectReference: {fileID: 0}
+    - target: {fileID: 2946887674948023209, guid: 8104a411c0bcc6e42ab6112eb7710bbe, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5463238
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8104a411c0bcc6e42ab6112eb7710bbe, type: 3}

@@ -167,7 +167,19 @@ MonoBehaviour:
   _maxHealth: 1000
   OnDeath:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4636736617728887226}
+        m_TargetAssemblyTypeName: Attacker, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   SpriteImage: {fileID: 1922801334}
   _attacks:
   - {fileID: 11400000, guid: f64cb825d705b1947a37a4faa72b37f1, type: 2}

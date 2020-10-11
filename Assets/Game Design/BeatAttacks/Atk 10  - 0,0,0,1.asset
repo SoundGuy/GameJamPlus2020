@@ -10,40 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79b1008860c32a540b6933ce4ba454c6, type: 3}
-  m_Name: Def 8  Move - 0,0,0,1
+  m_Name: Atk 10  - 0,0,0,1
   m_EditorClassIdentifier: 
   Damages:
   - _damageType: 0
-    Strentgh: 0
-    Range: 0
-    sprite: {fileID: 21300000, guid: df23fb22a37b58b40893d14fb3380422, type: 3}
-    moveDirection: 0
-    sound: {fileID: 0}
-  - _damageType: 3
-    Strentgh: 0
-    Range: 0
-    sprite: {fileID: 21300000, guid: df23fb22a37b58b40893d14fb3380422, type: 3}
-    moveDirection: 3
-    sound: {fileID: 0}
-  - _damageType: 0
-    Strentgh: 0
-    Range: 0
-    sprite: {fileID: 21300000, guid: df23fb22a37b58b40893d14fb3380422, type: 3}
-    moveDirection: 0
-    sound: {fileID: 0}
-  - _damageType: 3
-    Strentgh: 0
-    Range: 0
-    sprite: {fileID: 21300000, guid: df23fb22a37b58b40893d14fb3380422, type: 3}
-    moveDirection: 2
-    sound: {fileID: 0}
-  - _damageType: 0
-    Strentgh: 0
-    Range: 0
-    sprite: {fileID: 21300000, guid: df23fb22a37b58b40893d14fb3380422, type: 3}
-    moveDirection: 0
-    sound: {fileID: 0}
-  - _damageType: 1
     Strentgh: 0
     Range: 0
     sprite: {fileID: 21300000, guid: 5166d2e74b615fb498cfdc918f6c4fcb, type: 3}
@@ -52,24 +22,54 @@ MonoBehaviour:
   - _damageType: 0
     Strentgh: 0
     Range: 0
-    sprite: {fileID: 21300000, guid: df23fb22a37b58b40893d14fb3380422, type: 3}
-    moveDirection: 0
+    sprite: {fileID: 21300000, guid: 5166d2e74b615fb498cfdc918f6c4fcb, type: 3}
+    moveDirection: 3
     sound: {fileID: 0}
-  - _damageType: 3
+  - _damageType: 0
     Strentgh: 0
     Range: 0
-    sprite: {fileID: 21300000, guid: df23fb22a37b58b40893d14fb3380422, type: 3}
+    sprite: {fileID: 21300000, guid: 5166d2e74b615fb498cfdc918f6c4fcb, type: 3}
+    moveDirection: 0
+    sound: {fileID: 0}
+  - _damageType: 0
+    Strentgh: 0
+    Range: 0
+    sprite: {fileID: 21300000, guid: 5166d2e74b615fb498cfdc918f6c4fcb, type: 3}
     moveDirection: 2
     sound: {fileID: 0}
   - _damageType: 0
     Strentgh: 0
     Range: 0
-    sprite: {fileID: 21300000, guid: df23fb22a37b58b40893d14fb3380422, type: 3}
+    sprite: {fileID: 21300000, guid: 5166d2e74b615fb498cfdc918f6c4fcb, type: 3}
     moveDirection: 0
     sound: {fileID: 0}
-  - _damageType: 3
+  - _damageType: 1
+    Strentgh: 10
+    Range: 0
+    sprite: {fileID: 21300000, guid: 11a0bf88c4e423e4284643b85083dfce, type: 3}
+    moveDirection: 0
+    sound: {fileID: 0}
+  - _damageType: 0
     Strentgh: 0
     Range: 0
-    sprite: {fileID: 21300000, guid: df23fb22a37b58b40893d14fb3380422, type: 3}
+    sprite: {fileID: 21300000, guid: 5166d2e74b615fb498cfdc918f6c4fcb, type: 3}
+    moveDirection: 0
+    sound: {fileID: 0}
+  - _damageType: 0
+    Strentgh: 0
+    Range: 0
+    sprite: {fileID: 21300000, guid: 5166d2e74b615fb498cfdc918f6c4fcb, type: 3}
+    moveDirection: 2
+    sound: {fileID: 0}
+  - _damageType: 0
+    Strentgh: 0
+    Range: 0
+    sprite: {fileID: 21300000, guid: 5166d2e74b615fb498cfdc918f6c4fcb, type: 3}
+    moveDirection: 0
+    sound: {fileID: 0}
+  - _damageType: 2
+    Strentgh: 0
+    Range: 0
+    sprite: {fileID: 21300000, guid: 5166d2e74b615fb498cfdc918f6c4fcb, type: 3}
     moveDirection: 3
     sound: {fileID: 0}

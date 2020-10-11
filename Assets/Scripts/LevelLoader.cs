@@ -16,16 +16,20 @@ public class LevelLoader : MonoBehaviour
 
         if (sceneName == "")
         {
-            sceneName = levels[currentLevel++];
+            sceneName = levels[++currentLevel];
         }
         
-       SceneControllerManager.instance.FadeAndLoadScene(sceneName);
+        // TODO : reuse scene controller
+       //SceneControllerManager.instance.FadeAndLoadScene(sceneName);
+        SceneManager.LoadScene(sceneName);
     }
 
 
     public void RestartScene()
     {
-        SceneControllerManager.instance.FadeAndLoadScene(SceneManager.GetActiveScene().name);
+        // TODO : reuse scene controller
+        //SceneControllerManager.instance.FadeAndLoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     
     // TODO Make Singlton

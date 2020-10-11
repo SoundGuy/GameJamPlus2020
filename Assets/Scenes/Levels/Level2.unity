@@ -18068,6 +18068,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5402030023411001800, guid: 9991923f0afd8024f905e031f6d6c74d, type: 3}
+      propertyPath: currentLevel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7629661695817473192, guid: 9991923f0afd8024f905e031f6d6c74d, type: 3}
       propertyPath: m_Name
       value: Level Manager

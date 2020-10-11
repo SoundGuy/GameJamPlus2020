@@ -259,6 +259,12 @@ public class Attacker : Health
 
     }
 
+
+    public void Die()
+    {
+
+        LeanTween.rotateLocal(SpriteImage, Vector3.forward * -90f, BeatManager.BeatLength );
+    }
     // Start is called before the first frame update
     protected override void Start()
     {

@@ -20,4 +20,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test Scenes/Atk - Def on HealthBar Example.unity
     guid: b9cf0db7bd8c3a04e858f29fa23859cd
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level1.unity
+    guid: fdbe66a01a4617240ad0c68940bf77a9
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level2.unity
+    guid: 395b4a2a0a13822488ebdbceb5120052
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level3.unity
+    guid: 4b2f7f16b54808243aacab5036ed01a3
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level4.unity
+    guid: eda91b5a0344cf145a9c5b05f98459e6
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level5.unity
+    guid: 87c0e901557488c4b8ab7d1d7ea1d58f
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level6.unity
+    guid: aa4831a394a2dfc4988462af542cbab1
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level7.unity
+    guid: 397ee2b75f76cd740b0932fee520d058
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level8.unity
+    guid: d4283542aa3edba4f991400bb864e578
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level9.unity
+    guid: 1b758631baf69cb4e8e87ccbfc9784ad
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level10.unity
+    guid: a9458f8de8d7db04582b3258030239c8
   m_configObjects: {}
