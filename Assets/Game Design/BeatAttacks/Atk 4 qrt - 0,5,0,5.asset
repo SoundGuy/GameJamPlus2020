@@ -19,6 +19,8 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 5166d2e74b615fb498cfdc918f6c4fcb, type: 3}
     moveDirection: 0
     sound: []
+    HitSuccessSound: []
+    HitFailSound: []
   - _damageType: 1
     Strentgh: 5
     Range: 0
@@ -33,12 +35,19 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 615484be4974d72438c34f6e5e677d26, type: 3}
     - {fileID: 8300000, guid: 15f7c4f73da5fb54bb4d9c34cff4975d, type: 3}
     - {fileID: 8300000, guid: c7ce10c8fabbad64bb404b882a6037da, type: 3}
+    HitSuccessSound:
+    - {fileID: 8300000, guid: 7f9fde45b059af64d81a572ef4f14b4d, type: 3}
+    - {fileID: 8300000, guid: 7668f4b6f512ad341b7ff10382ef7d2b, type: 3}
+    - {fileID: 8300000, guid: 48b9a4822934cf041836a9bf0e50d015, type: 3}
+    HitFailSound: []
   - _damageType: 0
     Strentgh: 0
     Range: 0
     sprite: {fileID: 21300000, guid: 5166d2e74b615fb498cfdc918f6c4fcb, type: 3}
     moveDirection: 0
     sound: []
+    HitSuccessSound: []
+    HitFailSound: []
   - _damageType: 1
     Strentgh: 5
     Range: 0
@@ -53,3 +62,8 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 26d7377eaef2cd240958adfa5b2a322c, type: 3}
     - {fileID: 8300000, guid: 40533094613825d4e843ff5562f41d70, type: 3}
     - {fileID: 8300000, guid: 315a857349bfac04ea3396fd1739ccdf, type: 3}
+    HitSuccessSound:
+    - {fileID: 8300000, guid: 7f9fde45b059af64d81a572ef4f14b4d, type: 3}
+    - {fileID: 8300000, guid: 7668f4b6f512ad341b7ff10382ef7d2b, type: 3}
+    - {fileID: 8300000, guid: 48b9a4822934cf041836a9bf0e50d015, type: 3}
+    HitFailSound: []
