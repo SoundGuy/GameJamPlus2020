@@ -11,6 +11,11 @@ public class Health : MonoBehaviour
 
 
     [SerializeField] private LevelManager _levelManager;
+    
+    [SerializeField] private AudioClip [] HitSound;
+    [SerializeField] private AudioClip [] BlockSound;
+    [SerializeField] private AudioClip [] DeathSound;    
+
 
     public float hp
     {
@@ -45,13 +50,20 @@ public class Health : MonoBehaviour
         if (_hp <= 0) // DEAD
         {            
             OnDeath.Invoke();
+            
+            if (DeathSound.Length > 0)
+            {
+                int rand = Random.Range(0, DeathSound.Length);
+                GetComponent<AudioSource>().PlayOneShot(DeathSound[rand]);
+            }
+            
             if (_levelManager)
             {
                 _levelManager.AnnouceDeath(this);
             }
         }
         
-        DisplayDamageTaken(amount);
+        DisplayDamageTaken(amount);        
         
     }       
 
@@ -75,11 +87,20 @@ public class Health : MonoBehaviour
             healthBar.DamageReceived.transform.localPosition = OrigPos;
             healthBar.DamageReceived.alpha = 1;
         });
+        
+        
+        if (HitSound.Length > 0)
+        {
+            int rand = Random.Range(0, HitSound.Length);
+            GetComponent<AudioSource>().PlayOneShot(HitSound[rand]);
+        }
+        
     }
 
 
     public void BlockedAttack()
     {
+                        
         float effectLength = BeatManager.BeatLength * 0.8f; // put this parameter exposed  
         // Hit Points Text
         healthBar.DamageBlocked.gameObject.SetActive(true);
@@ -97,6 +118,12 @@ public class Health : MonoBehaviour
             healthBar.DamageBlocked.transform.localPosition = OrigPos;
             healthBar.DamageBlocked.alpha = 1;
         });
+        
+        if (BlockSound.Length > 0)
+        {
+            int rand = Random.Range(0, BlockSound.Length);
+            GetComponent<AudioSource>().PlayOneShot(BlockSound[rand]);
+        }
     }
     
     public void Heal(float amount)
