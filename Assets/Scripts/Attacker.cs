@@ -175,6 +175,14 @@ public class Attacker : Health
         
         
         
+        if (AtkDamage.sound.Length > 0)
+        {
+            int rand = Random.Range(0, AtkDamage.sound.Length);
+            GetComponent<AudioSource>().PlayOneShot(AtkDamage.sound[rand]);
+        }
+
+        
+        
         AttackCurrentBeat++;
         
         // Perform Attack
@@ -210,12 +218,7 @@ public class Attacker : Health
                             
                 }
                 
-                // Add Sound
-                if (AtkDamage.sound.Length > 0)
-                {
-                    int rand = Random.Range(0, AtkDamage.sound.Length);
-                    GetComponent<AudioSource>().PlayOneShot(AtkDamage.sound[rand]);
-                }
+                // TODO Add Success Sound
                 
                 
                 switch (DefDamegeTarget._damageType)
@@ -233,6 +236,7 @@ public class Attacker : Health
                     case BeatAttack.BeatDamageProperties.DamageType.NoDamage:
                     {
                         // TODO: Animate Failed Attack
+                        // TODO: Animate Failed Sound
                         break;
                     }                    
                 }
