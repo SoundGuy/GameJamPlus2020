@@ -24,6 +24,8 @@ public class BeatAttack : ScriptableObject
         [SerializeField] public Sprite sprite;
         [SerializeField] public MovementDirection moveDirection;
         [SerializeField] public AudioClip [] sound;
+        [SerializeField] public AudioClip [] HitSuccessSound;
+        [SerializeField] public AudioClip [] HitFailSound;
     }
 
     [SerializeField] public BeatDamageProperties  [] Damages;        

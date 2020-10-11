@@ -218,7 +218,12 @@ public class Attacker : Health
                             
                 }
                 
-                // TODO Add Success Sound
+                // Hit  Success Sound
+                if (AtkDamage.HitSuccessSound.Length > 0)
+                {
+                    int rand = Random.Range(0, AtkDamage.HitSuccessSound.Length);
+                    GetComponent<AudioSource>().PlayOneShot(AtkDamage.HitSuccessSound[rand]);
+                }
                 
                 
                 switch (DefDamegeTarget._damageType)
@@ -237,6 +242,12 @@ public class Attacker : Health
                     {
                         // TODO: Animate Failed Attack                                               
                         // TODO: Animate Failed Sound
+                        
+                        if (AtkDamage.HitFailSound.Length > 0)
+                        {
+                            int rand = Random.Range(0, AtkDamage.HitFailSound.Length);
+                            GetComponent<AudioSource>().PlayOneShot(AtkDamage.HitFailSound[rand]);
+                        }
                         
                         target.BlockedAttack();
                         break;
