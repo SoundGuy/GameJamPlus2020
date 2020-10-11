@@ -17,6 +17,7 @@ public class BeatManager : MonoBehaviour
     [SerializeField] private float startDelay = 5f;
     
     [SerializeField] public static float BeatLength;
+    [SerializeField] private float LevelLoadTime;
     [SerializeField] private float FirstBeat;
     [SerializeField] private float LastBeat;
     [SerializeField] public int playedBeat;
@@ -31,7 +32,8 @@ public class BeatManager : MonoBehaviour
             _instance = this;
         }
         BeatLength = 60f / BMP;
-     }
+        LevelLoadTime = Time.time;
+    }
 
     public  void StartBeat()
     {
@@ -51,7 +53,7 @@ public class BeatManager : MonoBehaviour
     {                        
         if (!beatEnabled)
         {
-            if (Time.time > startDelay)
+            if (Time.time - LevelLoadTime > startDelay)
             {
                 StartBeat();
             } else {

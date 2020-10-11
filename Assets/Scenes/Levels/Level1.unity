@@ -17256,6 +17256,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   startDelay: 2
+  LevelLoadTime: 0
   FirstBeat: 0
   LastBeat: 0
   playedBeat: 0
