@@ -218,12 +218,6 @@ public class Attacker : Health
                             
                 }
                 
-                // Hit  Success Sound
-                if (AtkDamage.HitSuccessSound.Length > 0)
-                {
-                    int rand = Random.Range(0, AtkDamage.HitSuccessSound.Length);
-                    GetComponent<AudioSource>().PlayOneShot(AtkDamage.HitSuccessSound[rand]);
-                }
                 
                 
                 switch (DefDamegeTarget._damageType)
@@ -235,7 +229,15 @@ public class Attacker : Health
                         target.Hit(damageTaken);
                         
                         
-                        // TODO: Animate Succefull Attack                                                                        
+                        // Hit  Success Sound
+                        if (AtkDamage.HitSuccessSound.Length > 0)
+                        {
+                            int rand = Random.Range(0, AtkDamage.HitSuccessSound.Length);
+                            GetComponent<AudioSource>().PlayOneShot(AtkDamage.HitSuccessSound[rand]);
+                        }
+                        
+                        // TODO: Animate Succefull Attack
+                        
                         break;
                     }
                     case BeatAttack.BeatDamageProperties.DamageType.NoDamage:
