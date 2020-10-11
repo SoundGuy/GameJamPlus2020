@@ -18,22 +18,30 @@ MonoBehaviour:
     Range: 0
     sprite: {fileID: 21300000, guid: 5166d2e74b615fb498cfdc918f6c4fcb, type: 3}
     moveDirection: 0
-    sound: {fileID: 0}
+    sound: []
+    HitSuccessSound: []
+    HitFailSound: []
   - _damageType: 0
     Strentgh: 0
     Range: 0
     sprite: {fileID: 21300000, guid: 5166d2e74b615fb498cfdc918f6c4fcb, type: 3}
     moveDirection: 0
-    sound: {fileID: 0}
+    sound: []
+    HitSuccessSound: []
+    HitFailSound: []
   - _damageType: 1
     Strentgh: 10
     Range: 0
     sprite: {fileID: 21300000, guid: 11a0bf88c4e423e4284643b85083dfce, type: 3}
     moveDirection: 0
-    sound: {fileID: 0}
+    sound: []
+    HitSuccessSound: []
+    HitFailSound: []
   - _damageType: 2
     Strentgh: 10
     Range: 0
     sprite: {fileID: 21300000, guid: 5166d2e74b615fb498cfdc918f6c4fcb, type: 3}
     moveDirection: 0
-    sound: {fileID: 0}
+    sound: []
+    HitSuccessSound: []
+    HitFailSound: []

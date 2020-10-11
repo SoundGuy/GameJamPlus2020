@@ -167,9 +167,17 @@ MonoBehaviour:
   healthBar: {fileID: 8029052059209822193}
   _hp: 1000
   _levelManager: {fileID: 0}
-  HitSound: []
+  HitSound:
+  - {fileID: 8300000, guid: 4936c6538d27c00448b09087894a386b, type: 3}
+  - {fileID: 8300000, guid: b6249a194403a6140b0eb75edddfbe46, type: 3}
+  - {fileID: 8300000, guid: 74ebc2c0e1e5f1448a49155375fc9566, type: 3}
+  - {fileID: 8300000, guid: 216176f91100f3e42abea048b7219f82, type: 3}
   BlockSound: []
-  DeathSound: []
+  DeathSound:
+  - {fileID: 8300000, guid: 8de3b762c8c54974b9918f4eca5e6a14, type: 3}
+  - {fileID: 8300000, guid: efb95199fdc57eb4f9d4c2290d01384e, type: 3}
+  - {fileID: 8300000, guid: 26059b7d8e32f1c4598f92752f42b3a0, type: 3}
+  - {fileID: 8300000, guid: 0232bbe28350c6b4eaaf78738af86a00, type: 3}
   _maxHealth: 1000
   OnDeath:
     m_PersistentCalls:

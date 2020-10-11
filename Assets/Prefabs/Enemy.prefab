@@ -175,7 +175,15 @@ MonoBehaviour:
   HitSound: []
   BlockSound:
   - {fileID: 8300000, guid: 0ae8cf4bf4d259c4fbb7a93e08514123, type: 3}
-  DeathSound: []
+  DeathSound:
+  - {fileID: 8300000, guid: 335a9a7d3d63f394191e66f663db3d4a, type: 3}
+  - {fileID: 8300000, guid: f70eac381be75cf4e85529ae7e6f2a9f, type: 3}
+  - {fileID: 8300000, guid: 9ef52a214747ada409fda254aeb121bb, type: 3}
+  - {fileID: 8300000, guid: 3141603cbc13fca4a98a2e0d53815854, type: 3}
+  - {fileID: 8300000, guid: 2d8f8e133436f314db35abe7894891a6, type: 3}
+  - {fileID: 8300000, guid: 7abc35a787ceef849a40f781feb7bc84, type: 3}
+  - {fileID: 8300000, guid: 62110a420dd8e6d4cb10bbb475b7e9e8, type: 3}
+  - {fileID: 8300000, guid: bb0f6abe667bd334aaef9f7a774437ae, type: 3}
   _maxHealth: 100
   OnDeath:
     m_PersistentCalls:

@@ -203,6 +203,7 @@ public class Attacker : Health
         
         if (AtkDamage.sound.Length > 0)
         {
+            //Debug.Log("AttackDamage " + AtkDamage + " " + AtkDamage.sound.Length );
             int rand = Random.Range(0, AtkDamage.sound.Length);
             GetComponent<AudioSource>().PlayOneShot(AtkDamage.sound[rand]);
         }
