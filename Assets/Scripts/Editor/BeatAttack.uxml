@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement>
+        <Style src="BeatAttack.uss" />
+        <ui:Label text="Label3" display-tooltip-when-elided="True" />
+        <uie:ObjectField label="BeatAttack" allow-scene-objects="false" type="BeatAttack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="BeatAttackOBJ" />
+        <ui:VisualElement class="BeatsGroup">
+            <ui:VisualElement>
+                <ui:Label text="Label" display-tooltip-when-elided="True" />
+            </ui:VisualElement>
+            <ui:VisualElement>
+                <ui:Label text="Label" display-tooltip-when-elided="True" />
+            </ui:VisualElement>
+            <ui:VisualElement>
+                <ui:Label text="Label" display-tooltip-when-elided="True" />
+            </ui:VisualElement>
+            <ui:VisualElement>
+                <ui:Label text="Label2" display-tooltip-when-elided="True" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:IMGUIContainer />
+    </ui:VisualElement>
+</ui:UXML>
