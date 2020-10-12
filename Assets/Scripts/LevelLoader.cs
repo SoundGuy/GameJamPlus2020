@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using Malee.List;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,8 +11,18 @@ public class LevelLoader : MonoBehaviour
     
     // TODO make these static?
     // TODO have levels as scriptable objects?
-    [SerializeField] private string [] levels; // TODO -- keep array or turn into list?
+    
+    
+    [SerializeField] private string [] levels; // TODO  Remove this    
+    [SerializeField]  [Reorderable]  private  ReorderableStringList levels2; // TODO -- Start using this
     [SerializeField] private int currentLevel=0;
+    
+    
+    //There's a bug with Unity and rendering when an Object has no CustomEditor defined. As in this example
+    //The list will reorder correctly, but depth sorting and animation will not update :(
+    [System.Serializable]
+    public class ReorderableStringList : ReorderableArray<string> {
+    }
     
     public void LoadNextScene(string sceneName)
     {
@@ -47,7 +59,7 @@ public class LevelLoader : MonoBehaviour
     
     // TODO Make Singlton
     private void Start()
-    {
+    {        
         //DontDestroyOnLoad(this);
     }
 }
