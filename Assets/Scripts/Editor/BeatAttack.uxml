@@ -1,22 +1,25 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Template name="BeatUiElement" src="BeatUiElement.uxml" />
     <ui:VisualElement>
         <Style src="BeatAttack.uss" />
         <ui:Label text="Label3" display-tooltip-when-elided="True" />
         <uie:ObjectField label="BeatAttack" allow-scene-objects="false" type="BeatAttack, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" name="BeatAttackOBJ" />
-        <ui:VisualElement class="BeatsGroup">
-            <ui:VisualElement>
-                <ui:Label text="Label" display-tooltip-when-elided="True" />
+        <ui:ScrollView name="BeatsScroll" mode="Horizontal" style="flex-direction: row;">
+            <ui:VisualElement name="BeatsContainer" class="BeatsGroup" style="flex-direction: row; align-items: stretch;">
+                <ui:VisualElement>
+                    <ui:Instance template="BeatUiElement" name="BeatUiElement" />
+                </ui:VisualElement>
+                <ui:VisualElement>
+                    <ui:Instance template="BeatUiElement" name="BeatUiElement" />
+                </ui:VisualElement>
+                <ui:VisualElement>
+                    <ui:Instance template="BeatUiElement" name="BeatUiElement" />
+                </ui:VisualElement>
+                <ui:VisualElement>
+                    <ui:Instance template="BeatUiElement" name="BeatUiElement" />
+                </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement>
-                <ui:Label text="Label" display-tooltip-when-elided="True" />
-            </ui:VisualElement>
-            <ui:VisualElement>
-                <ui:Label text="Label" display-tooltip-when-elided="True" />
-            </ui:VisualElement>
-            <ui:VisualElement>
-                <ui:Label text="Label2" display-tooltip-when-elided="True" />
-            </ui:VisualElement>
-        </ui:VisualElement>
+        </ui:ScrollView>
         <ui:IMGUIContainer />
     </ui:VisualElement>
 </ui:UXML>

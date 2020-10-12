@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement>
+        <ui:Label text="Beat1" display-tooltip-when-elided="True" name="BeatNum" />
+        <uie:ProgressBar title="my-progress" />
+        <uie:EnumField label="Damage Type" value="NULL" name="DamageType" />
+        <uie:FloatField label="Stength" value="42.2" name="strength" />
+        <uie:ObjectField label="Object Field" name="Sprite" type="UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" />
+        <uie:EnumField label="Enum" value="Center" />
+    </ui:VisualElement>
+</ui:UXML>
