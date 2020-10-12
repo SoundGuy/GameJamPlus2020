@@ -14,5 +14,4 @@
 }
 
 .unity-progress-bar__progress {
-    -unity-background-image-tint-color: rgba(178, 2, 0, 255);
 }
