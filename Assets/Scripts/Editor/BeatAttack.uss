@@ -1,3 +1,18 @@
 .BeatsGroup {
     flex-direction: row;
 }
+
+.BeatElement {
+    width: 50%;
+}
+
+.StrengthBar {
+    background-color: rgba(122, 0, 180, 255);
+}
+
+.unity-progress-bar {
+}
+
+.unity-progress-bar__progress {
+    -unity-background-image-tint-color: rgba(178, 2, 0, 255);
+}

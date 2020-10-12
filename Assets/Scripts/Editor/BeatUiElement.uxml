@@ -1,10 +1,13 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
-    <ui:VisualElement>
-        <ui:Label text="Beat1" display-tooltip-when-elided="True" name="BeatNum" />
-        <uie:ProgressBar title="my-progress" />
+    <ui:VisualElement name="BeatElement" class="BeatElement" style="width: 250px;">
+        <Style src="BeatAttack.uss" />
+        <uie:ProgressBar title="." name="BeatBar" high-value="100" />
+        <uie:ProgressBar title="." name="StrengthBar" high-value="1" class="StrengthBar" />
+        <ui:Label text="Beat1" display-tooltip-when-elided="True" name="BeatNum" style="position: absolute; top: 3px; left: 91px; width: 59px;" />
+        <ui:VisualElement name="SpriteInBeat" style="background-image: url(&apos;/Assets/Graphics/check-and-cross-marks.png&apos;); background-color: rgb(182, 182, 182); min-width: 20px; min-height: 20px; align-items: center; justify-content: center; -unity-background-image-tint-color: rgba(255, 255, 255, 255); width: 40px; height: 34px; flex-direction: column; flex-wrap: nowrap; flex-basis: auto; flex-shrink: 1; opacity: 1; position: absolute; top: 68px; left: 108px;" />
         <uie:EnumField label="Damage Type" value="NULL" name="DamageType" />
         <uie:FloatField label="Stength" value="42.2" name="strength" />
-        <uie:ObjectField label="Object Field" name="Sprite" type="UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" />
-        <uie:EnumField label="Enum" value="Center" />
+        <uie:ObjectField label="Sprite" name="Sprite" type="UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" />
+        <uie:EnumField label="Move Dir" value="Center" name="MoveDirection" />
     </ui:VisualElement>
 </ui:UXML>

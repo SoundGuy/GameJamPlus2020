@@ -69,8 +69,8 @@ public class BeatAttackEditor : EditorWindow
         {
 
             VisualElement beatEelement = CreateBeatElement(damagePropertiese,i);
-            ProgressBar progress = beatEelement.Q<ProgressBar>();
-            float progressVal = 100f * i / _beatAttack.Damages.Length ;
+            ProgressBar progress = beatEelement.Q<ProgressBar>("BeatBar");
+            float progressVal = 100f* i / _beatAttack.Damages.Length ;
 
             progress.value = progressVal; 
             
@@ -107,25 +107,65 @@ public class BeatAttackEditor : EditorWindow
         element.Add(new Label("Strentgh"));
         */
         
+        SerializedObject so = new  SerializedObject(_beatAttack);
+        foreach (SerializedProperty o in so.GetIterator())
+        {
+            //Debug.Log("o" + o + " " + o.propertyPath);   
+        }
+        
+        
         string beat = beatNum.ToString();
         element.Q<Label>("BeatNum").text = "Beat " + beat;
 
-        EnumField damageType = element.Q<EnumField>("DamageType");        
-        damageType.value = damagePropertiese._damageType;
+        EnumField damageType = element.Q<EnumField>("DamageType");
+        damageType.BindProperty(so.FindProperty("Damages.Array.data[" + beat + "]._damageType"));
+        //damageType.value = damagePropertiese._damageType;
         
         FloatField stength = element.Q<FloatField>("strength");        
         //stength.value = damagePropertiese.Strentgh;
 
-        SerializedObject so = new  SerializedObject(_beatAttack);
-        Debug.Log("So" + so);
-        SerializedObject so1 = new  SerializedObject(_beatAttack.Damages);
-        SerializedProperty sp =so.FindProperty("Damages[0].Strentgh");
+        
+        
+        SerializedProperty sp =so.FindProperty("Damages.Array.data[" +beat +"].Strentgh");
         Debug.Log("Sp" + sp);
         stength.BindProperty(sp);
 
+
+        float maxStr = 0f;
+        foreach (BeatAttack.BeatDamageProperties tmpdamagePropertiese in _beatAttack.Damages)
+        {
+            if (tmpdamagePropertiese.Strentgh > maxStr)
+            {
+                maxStr = tmpdamagePropertiese.Strentgh;
+                break;
+            }
+        }
+
+        ProgressBar strengthProgressBar = element.Q<ProgressBar>("StrengthBar");
+        float progval = 0f;
+        if (maxStr > 0f)
+        {
+            progval = damagePropertiese.Strentgh / maxStr;
+            
+        }
+
+        strengthProgressBar.value = progval;
+            
+
         //Debug.Log(typeof(Sprite).AssemblyQualifiedName);
-        ObjectField spriteField= element.Q<ObjectField>("Sprite");        
-        spriteField.value = damagePropertiese.sprite;
+        ObjectField spriteField= element.Q<ObjectField>("Sprite");
+        spriteField.BindProperty(so.FindProperty("Damages.Array.data[" + beat + "].sprite"));
+        //spriteField.value = damagePropertiese.sprite;
+
+        // TODO - Make this change when you change sprite 
+        VisualElement beatSprite = element.Q<VisualElement>("SpriteInBeat");
+        IStyle beatSpriteStyle = beatSprite.style;
+        beatSpriteStyle.backgroundImage = damagePropertiese.sprite.texture;
+        
+        
+        EnumField moveType = element.Q<EnumField>("MoveDirection");
+        moveType.BindProperty(so.FindProperty("Damages.Array.data[" + beat + "].moveDirection"));
+
         
         
         return element;
