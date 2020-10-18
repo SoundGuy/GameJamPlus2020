@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.ben-w.uerp": {
+      "version": "https://github.com/MarshMello0/UERP.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "b9cde76be8bc003416f0a18f323ec61d4d8ebcd8"
+    },
     "com.malee.reorderablelist": {
       "version": "https://github.com/cfoulston/Unity-Reorderable-List.git",
       "depth": 0,
